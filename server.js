@@ -1,13 +1,13 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var app = express();
-//insert mongo schema
+var entrysRouter = require(__dirname + "/routes/entries_router");
 
-//write connection to database - mongoose.connect
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/entry_dev');
 
 app.use(express.static(__dirname + '/build'));
 
-//app.use('/api', ROUTER);
+app.use('/api', entrysRouter);
 
 app.use(function(req, res) {
   res.status(404).send('NOT FOUND!!!!!');
