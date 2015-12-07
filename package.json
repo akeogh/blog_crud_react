@@ -18,8 +18,12 @@
     "webpack-stream": "^2.3.0"
   },
   "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "mongoose": "^4.2.9"
+    "mongoose": "^4.2.9",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   }
 }

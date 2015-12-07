@@ -4,3 +4,6 @@ X  build router
 X  build models
    build gulpfile
    write tests?
+
+   function find(parameters, callback) {
+ }
