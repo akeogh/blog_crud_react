@@ -17,10 +17,10 @@ entrysRouter.get('/:id', function(req, res) {
   });
 });
 
-entrysRouter.post('/', bodyParser.json(), function(req, res) {
+entrysRouter.post('/', bodyParser.urlencoded({extended: true}), bodyParser.json(), function(req, res) {
   var newEntry = new Entry(req.body);
   newEntry.save(function(err, data) {
-    respond(res, err, {msg: 'new post saved.'});
+    respond(res, err, data);
   });
 });
 
